@@ -29,7 +29,7 @@ public class MabanqueApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Client c1 = clientRepository.save(new Client("Hassan","hassan@gmail.com"));
+       /* Client c1 = clientRepository.save(new Client("Hassan","hassan@gmail.com"));
         Client c2 = clientRepository.save(new Client("Rachid","rachid@gmail.com"));
 
         Compte cp1 = compteRepository.save(new CompteCourant("c1", new Date(),90000,c1,6000));
@@ -44,6 +44,6 @@ public class MabanqueApplication implements CommandLineRunner {
         operationRepository.save(new Versement(new Date(),2300,cp2));
         operationRepository.save(new Retrait(new Date(),3000,cp2));
 
-        banqueService.verser("c1",111111);
+        banqueService.verser("c1",111111);*/
     }
 }

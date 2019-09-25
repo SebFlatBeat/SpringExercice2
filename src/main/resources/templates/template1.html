@@ -14,38 +14,38 @@
           th:href="@{/css/myStyle.css}"/>
 </head>
 <body>
-    <header>
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/operation}">
-                             Opérations
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/comptes}">
-                                Comptes
-                            </a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" th:href="@{/clients}">
-                                Clients
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
-    <th:block layout:fragment="content">
+<header>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/operations}">
+                            Opérations
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/comptes}">
+                            Comptes
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" th:href="@{/clients}">
+                            Clients
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<th:block layout:fragment="content">
 
-    </th:block>
-    <footer>
-        <div class="navbar fixed-bottom">
-            <small>@L'adresse de ma banque</small>
-        </div>
-    </footer>
+</th:block>
+<footer>
+    <div class="navbar fixed-bottom">
+        <small>@L'adresse de ma banque</small>
+    </div>
+</footer>
 </body>
 </html>

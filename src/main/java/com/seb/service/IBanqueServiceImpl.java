@@ -54,6 +54,8 @@ public class IBanqueServiceImpl implements IBanqueService {
 
     @Override
     public void virement(String codeCpte1, String codeCpte2, double montant) {
+        if(codeCpte1.equals(codeCpte2))
+            throw new RuntimeException("Impossible de faire un virement sur le même compte");
         retirer(codeCpte1,montant);
         verser(codeCpte2,montant);
     }
