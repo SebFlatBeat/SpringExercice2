@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th ="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5"
       layout:decorate="~{template1}">
 <head>
     <meta charset="UTF-8"/>
@@ -67,7 +68,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6"  sec:authorize="hasRole('ROLE_ADMIN')">
                 <div class="card border-info mb-3" th:if="${compte}">
                     <div class="card-header card text-white bg-info mb-3">
                         <div class="card-title">Opérations sur le compte</div>
@@ -99,11 +100,11 @@
                                     <label>Vers :</label>
                                     <input type="text" name="codeCompte2"/>
                                 </div>
-                                <div>
+                                <div class="p-1">
                                     <label>Montant :</label>
                                     <input type="text" name="montant"/>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-info">Save</button>
                                 <div class="text-danger" th:text="${#httpServletRequest.getParameter('error')}">
 
                                 </div>
